@@ -17,7 +17,7 @@ const Home = ({ history }) => {
           <div className="my-2 py-24 bg-white">
             <IonItem
               lines="none"
-              className="mt-3 text-center text-5xl font-semibold"
+              className="text-center text-5xl font-semibold"
             >
               <IonLabel className="">パンダの館</IonLabel>
             </IonItem>
