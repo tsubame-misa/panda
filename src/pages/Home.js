@@ -14,7 +14,7 @@ const Home = ({ history }) => {
     <IonPage>
       <IonContent fullscreen color="dark">
         <div className="display-flex">
-          <div className="my-2 py-24 bg-white">
+          <div className="my-2 py-16 bg-white">
             <IonItem
               lines="none"
               className="text-center text-5xl font-semibold"
