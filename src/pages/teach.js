@@ -48,11 +48,11 @@ const Talking = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color="dark">
           <IonBackButton
             defaultHref="/"
             slot="start"
-            color="dark"
+            color="light"
             icon={chevronBackOutline}
           />
           <IonTitle>
@@ -60,55 +60,55 @@ const Talking = () => {
           </IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen className="center">
-        <div className="test">
-          <div className="t">
-            <img className="panda_img" src={img}></img>
-          </div>
-
-          <div className="t">
+      <IonContent fullscreen>
+        <div className="display-flex-talk">
+          <div className="text-center m-4">
             {pandaComment === "" ? (
-              <div className="h">
-                <IonItem lines="none">パンダ構文に変換するよ！</IonItem>
-                <IonItem lines="none">何か話しかけてみよう！！</IonItem>
-                <IonItem lines="none" className="alert">
+              <div className="text-center leading-relaxed">
+                <p className="text-xl">パンダ構文に変換するよ！</p>
+                <p className="text-xl">何か話しかけてみよう！！</p>
+                <p className="text-sm">
                   ※パンダが寝てると返事が遅いことがあるから少し待ってね。
-                </IonItem>
+                </p>
+              </div>
+            ) : pandaComment === undefined ? (
+              <div className="mt-10 mb-6 text-center inline-block border-black border-2 rounded-lg  px-6 py-2">
+                <p className="text-center leading-normal ">
+                  何かエラーが起きてるな…
+                </p>
               </div>
             ) : (
-              <div className="balloonpppp">
-                <IonItem lines="none" className="answer">
-                  {pandaComment}
-                </IonItem>
+              <div className="mt-10 mb-6  text-center inline-block border-black border-2 rounded-lg  px-6 py-2">
+                <p className="text-center leading-normal ">{pandaComment}</p>
               </div>
             )}
           </div>
-        </div>
 
-        <div className="test">
-          <div className="t">
-            <div className="textbox">
+          <img className="object-contain h-48 w-full" src={img}></img>
+
+          <div className="mt-6">
+            <div className="text-center border-black border-2 rounded-lg mx-4 my-2 p-2">
               <IonTextarea
                 value={message}
-                //placeholder="何か話しかけてみよう！"
+                placeholder="何か話しかけてみよう！"
                 onIonChange={(e) => {
                   setMessage(e.detail.value);
                 }}
               ></IonTextarea>
             </div>
-          </div>
-          <div className="t">
-            {" "}
-            <IonButton
-              className="talkbutton"
-              color="dark"
-              fill="outline"
-              onClick={() => {
-                sendMessage();
-              }}
-            >
-              変換する
-            </IonButton>
+
+            <div className="text-center mt-3">
+              <IonButton
+                className="talkbutton"
+                color="dark"
+                fill="outline"
+                onClick={() => {
+                  sendMessage();
+                }}
+              >
+                変換する
+              </IonButton>
+            </div>
           </div>
         </div>
       </IonContent>
