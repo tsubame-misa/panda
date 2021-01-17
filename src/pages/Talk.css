@@ -1,5 +1,6 @@
 .display-flex-talk {
-  /*background-color: white;*/
+  background-color: white;
+  color: black;
   /*border: double 5px;*/
 
   width: 100%;
@@ -9,4 +10,38 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.balloon {
+  background: #ffffff;
+  display: inline-block;
+  position: relative;
+  width: 75%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  /*height: 40px;*/
+  border: 2px solid black;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+.balloon:before {
+  content: "";
+  display: inline-block;
+  border: 10px solid transparent;
+  border-top-color: black;
+  position: absolute;
+  left: 148px;
+  left: 50%;
+  bottom: -20px;
+}
+.balloon:after {
+  content: "";
+  display: inline-block;
+  border: 11px solid transparent;
+  border-top-color: white;
+  position: absolute;
+  left: 146px;
+  left: 50%;
+  bottom: -18px;
 }

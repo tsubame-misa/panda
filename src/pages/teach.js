@@ -72,14 +72,12 @@ const Talking = () => {
                 </p>
               </div>
             ) : pandaComment === undefined ? (
-              <div className="mt-10 mb-6 text-center inline-block border-black border-2 rounded-lg  px-6 py-2">
-                <p className="text-center leading-normal ">
-                  何かエラーが起きてるな…
-                </p>
+              <div className="mt-10 mb-6 ">
+                <p className="balloon ">何かエラーが起きてるな…</p>
               </div>
             ) : (
-              <div className="mt-10 mb-6  text-center inline-block border-black border-2 rounded-lg  px-6 py-2">
-                <p className="text-center leading-normal ">{pandaComment}</p>
+              <div className="mt-10 mb-6 ">
+                <p className="balloon ">{pandaComment}</p>
               </div>
             )}
           </div>

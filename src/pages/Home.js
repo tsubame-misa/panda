@@ -12,7 +12,7 @@ import panda from "../img/panda_touka.png";
 const Home = ({ history }) => {
   return (
     <IonPage>
-      <IonContent fullscreen color="dark">
+      <IonContent fullscreen>
         <div className="display-flex">
           <div className="my-2 py-2 bg-white">
             <IonItem

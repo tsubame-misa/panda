@@ -68,24 +68,35 @@ const Talking = () => {
       </IonHeader>
       <IonContent fullscreen>
         <div className="display-flex-talk">
-          <div className="text-center m-4">
+          <div className="text-center m-4 ">
             {pandaComment === "" ? (
-              <div className="text-center leading-relaxed">
-                <p className="text-xl">野生のパンダが出てきた！！</p>
-                <p className="text-xl ">何か話しかけてみよう！</p>
-                <p className="text-sm">
-                  ※パンダが寝てると返事が遅いことがあるから少し待ってね。
-                </p>
-              </div>
+              window.innerWidth >= 400 ? (
+                <div className="text-center leading-relaxed">
+                  <p className="text-xl">野生のパンダが出てきた！！</p>
+                  <p className="text-xl ">何か話しかけてみよう！</p>
+                  <p className="text-sm">
+                    ※パンダが寝てると返事が遅いことがあるから少し待ってね。
+                  </p>
+                </div>
+              ) : (
+                <div className=" text-center leading-relaxed">
+                  <br />
+                  <p className="text-xl">野生のパンダが出てきた！！</p>
+                  <p className="text-xl ">何か話しかけてみよう！</p>
+                  <p className="text-sm">
+                    ※パンダが寝てると返事が遅いことがあるから少し待ってね。
+                  </p>
+                </div>
+              )
             ) : pandaComment === undefined ? (
-              <div className="mt-16 text-center inline-block border-black border-2 rounded-lg  px-6 py-2">
-                <p className="text-center leading-normal ">
-                  何かエラーが起きてるな…
-                </p>
+              <div className="mt-16 ">
+                <p className="balloon ">何かエラーが起きてるな…</p>
               </div>
             ) : (
-              <div className="mt-16  text-center inline-block border-black border-2 rounded-lg  px-6 py-2">
-                <p className="text-center leading-normal ">{pandaComment}</p>
+              <div className="mt-16">
+                <div className="balloon">
+                  <p className="">{pandaComment}</p>
+                </div>
               </div>
             )}
           </div>
