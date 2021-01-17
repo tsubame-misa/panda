@@ -6,7 +6,7 @@ import {
   IonItem,
 } from "@ionic/react";
 import React from "react";
-import "./Home.css";
+import "./style.css";
 import panda from "../img/panda_touka.png";
 
 const Home = ({ history }) => {
@@ -33,7 +33,6 @@ const Home = ({ history }) => {
               >
                 パンダとおしゃべり
               </IonButton>
-              {/*<a class="button is-warning" href="/talk">全てのラーメン店を見る</a>*/}
             </div>
             <div className="">
               <IonButton
@@ -43,7 +42,6 @@ const Home = ({ history }) => {
                 onClick={() => history.push("/teach")}
               >
                 パンダ構文講座
-                {/*} <IonItem href="/teach"></IonItem>*/}
               </IonButton>
 
               <IonButton

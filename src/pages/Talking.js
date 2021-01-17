@@ -11,25 +11,11 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import React, { useState } from "react";
-import "./Talk.css";
+import "./style.css";
 import panda from "../img/panda_touka.png";
 import jk from "../img/jk.png";
 import { chevronBackOutline } from "ionicons/icons";
-
-export const request_send_massage = async (item) => {
-  try {
-    const response = await fetch(
-      `${process.env.REACT_APP_API_ENDPOINT}/user_message`,
-      {
-        method: "PUT",
-        body: JSON.stringify(item),
-      }
-    );
-    return await response.json();
-  } catch (e) {
-    console.error(e);
-  }
-};
+import { request_send_massage } from "./services";
 
 const Talking = () => {
   const [pandaComment, setPandaComment] = useState("");
@@ -90,7 +76,10 @@ const Talking = () => {
               )
             ) : pandaComment === undefined ? (
               <div className="mt-16 ">
-                <p className="balloon ">何かエラーが起きてるな…</p>
+                <div className="balloon">
+                  <p>何かエラーが起きてるな…</p>
+                  <p>もう一回押してみて</p>
+                </div>
               </div>
             ) : (
               <div className="mt-16">

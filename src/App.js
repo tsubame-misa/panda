@@ -4,8 +4,8 @@ import { IonApp, IonRouterOutlet } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import Home from "./pages/Home";
 import Talking from "./pages/Talking";
-import Knife from "./pages/knife";
-import Teach from "./pages/teach";
+import Knife from "./pages/Knife";
+import Teach from "./pages/Teach";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";

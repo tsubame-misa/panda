@@ -1,3 +1,33 @@
+export const request_send_massage = async (item) => {
+  try {
+    const response = await fetch(
+      `${process.env.REACT_APP_API_ENDPOINT}/change_panda`,
+      {
+        method: "PUT",
+        body: JSON.stringify(item),
+      }
+    );
+    return await response.json();
+  } catch (e) {
+    console.error(e);
+  }
+};
+
+export const request_changed_massage = async (item) => {
+  try {
+    const response = await fetch(
+      `${process.env.REACT_APP_API_ENDPOINT}/user_message`,
+      {
+        method: "PUT",
+        body: JSON.stringify(item),
+      }
+    );
+    return await response.json();
+  } catch (e) {
+    console.error(e);
+  }
+};
+
 export const data = [
   "社会性しか売れるものがない皆さん",
   "それExcelでできるよ",

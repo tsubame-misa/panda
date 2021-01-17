@@ -11,24 +11,10 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import React, { useState } from "react";
-import "./Talk.css";
+import "./style.css";
 import panda from "../img/panda_touka.png";
 import { chevronBackOutline } from "ionicons/icons";
-
-export const request_send_massage = async (item) => {
-  try {
-    const response = await fetch(
-      `${process.env.REACT_APP_API_ENDPOINT}/change_panda`,
-      {
-        method: "PUT",
-        body: JSON.stringify(item),
-      }
-    );
-    return await response.json();
-  } catch (e) {
-    console.error(e);
-  }
-};
+import { request_changed_massage } from "./services";
 
 const Talking = () => {
   const [pandaComment, setPandaComment] = useState("");
@@ -37,7 +23,7 @@ const Talking = () => {
 
   const sendMessage = () => {
     console.log(message);
-    request_send_massage(message)
+    request_changed_massage(message)
       .then((data) => {
         setPandaComment(data);
         console.log(pandaComment);
@@ -73,7 +59,10 @@ const Talking = () => {
               </div>
             ) : pandaComment === undefined ? (
               <div className="mt-10 mb-6 ">
-                <p className="balloon ">何かエラーが起きてるな…</p>
+                <div className="balloon">
+                  <p>何かエラーが起きてるな…</p>
+                  <p>もう一回押してみて</p>
+                </div>
               </div>
             ) : (
               <div className="mt-10 mb-6 ">

@@ -12,8 +12,7 @@ import {
 } from "@ionic/react";
 import React, { useState } from "react";
 import panda from "../img/panda_with_bat_touka.png";
-import { data } from "./data";
-import "./knife.css";
+import { data } from "./services";
 import { chevronBackOutline } from "ionicons/icons";
 
 const Knife = () => {
@@ -45,7 +44,7 @@ const Knife = () => {
           <div className="text-center m-6">
             {pandaComment === "" ? (
               <div className="mb-14 text-xl leading-relaxed">
-                <p>パンダの独り言を聞くことができます。</p>
+                <p className="text-lg">パンダの独り言を聞くことができます。</p>
                 <p>たまに刺されます。</p>
                 <p>覚悟が良ければパンダをクリック！</p>
               </div>
