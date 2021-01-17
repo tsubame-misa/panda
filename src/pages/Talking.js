@@ -56,7 +56,7 @@ const Talking = () => {
         <div className="display-flex-talk">
           <div className="text-center m-4 ">
             {pandaComment === "" ? (
-              window.innerWidth >= 400 ? (
+              window.innerHeight >= 570 ? (
                 <div className="text-center leading-relaxed">
                   <p className="text-xl">野生のパンダが出てきた！！</p>
                   <p className="text-xl ">何か話しかけてみよう！</p>

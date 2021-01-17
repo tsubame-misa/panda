@@ -3,6 +3,7 @@ import {
   IonButton,
   IonContent,
   IonHeader,
+  IonIcon,
   IonItem,
   IonLabel,
   IonPage,
@@ -13,12 +14,14 @@ import {
 import React, { useState } from "react";
 import "./style.css";
 import panda from "../img/panda_touka.png";
-import { chevronBackOutline } from "ionicons/icons";
+import { chevronBackOutline, logoTwitter } from "ionicons/icons";
 import { request_changed_massage } from "./services";
+import { isEmptyStatement } from "typescript";
 
 const Talking = () => {
   const [pandaComment, setPandaComment] = useState("");
   const [message, setMessage] = useState();
+  const [premessage, setPreMessage] = useState();
   const img = panda;
 
   const sendMessage = () => {
@@ -28,7 +31,10 @@ const Talking = () => {
         setPandaComment(data);
         console.log(pandaComment);
       })
-      .then(() => setMessage(null));
+      .then(() => {
+        setPreMessage(message);
+        setMessage(null);
+      });
   };
 
   return (
@@ -83,7 +89,6 @@ const Talking = () => {
                 }}
               ></IonTextarea>
             </div>
-
             <div className="text-center mt-3">
               <IonButton
                 className="talkbutton"
@@ -96,6 +101,18 @@ const Talking = () => {
                 変換する
               </IonButton>
             </div>
+
+            {premessage !== undefined ? (
+              <IonButton
+                size="small"
+                href={`http://twitter.com/share?url=https://kowai-panda.netlify.app&text=【パンダ構文口座】%0a %0a「${premessage}」をパンダ構文変換すると「${pandaComment}」になりました。%0a %0a 制作者：@Tsubame_misa  %0a %0a %0a ▼みんなもパンダと仲良くなろう！ &count=horizontal&lang=ja`}
+              >
+                <IonIcon icon={logoTwitter}></IonIcon>
+                &ensp;結果をツイートする！
+              </IonButton>
+            ) : (
+              []
+            )}
           </div>
         </div>
       </IonContent>
