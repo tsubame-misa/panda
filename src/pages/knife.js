@@ -36,7 +36,7 @@ const Knife = () => {
             icon={chevronBackOutline}
           />
           <IonTitle>
-            <IonLabel>刺される</IonLabel>
+            <IonLabel>つぶやき</IonLabel>
           </IonTitle>
         </IonToolbar>
       </IonHeader>

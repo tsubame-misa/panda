@@ -52,7 +52,7 @@ const Home = ({ history }) => {
                 color="dark"
                 onClick={() => history.push("/knife")}
               >
-                パンダに刺される
+                パンダのつぶやき
               </IonButton>
             </div>
           </div>
