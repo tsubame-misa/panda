@@ -30,7 +30,7 @@ def make_response(text):
     if "Rust" in text:
         return "Rustはいいぞ"
 
-    if "データ" in text:
+    if "データ" in text or "でーた" in text:
         return "データさえあれば非常に簡単にできる"
 
     mecab = MeCab.Tagger()
@@ -80,9 +80,6 @@ def make_response(text):
         data = ["おはよー", "ひさしぶり"]
         i = random.randint(0, len(data)-1)
         return data[i]
-
-    if "データ" in meishi_list:
-        return "データさえあれば非常に簡単にできる"
 
     aiduti = ["うんうん", "へぇ", "それで？", "なるほど？",
               "草", "寝る寝るねーるね", "おやおや", "こわい", "ﾐｯ"]

@@ -1,10 +1,7 @@
 import {
   IonBackButton,
-  IonButton,
   IonContent,
   IonHeader,
-  IonImg,
-  IonItem,
   IonLabel,
   IonPage,
   IonTitle,
@@ -62,32 +59,6 @@ const Knife = () => {
             src={img}
             onClick={() => setMsg()}
           ></img>
-
-          {/*<div className="mt-8 text-center  ">
-            {pandaComment === "" ? (
-              <IonButton
-                className="nextbutton"
-                color="dark"
-                fill="outline"
-                onClick={() => {
-                  setMsg();
-                }}
-              >
-                気持ちの準備完了！
-              </IonButton>
-            ) : (
-              <IonButton
-                className="nextbutton"
-                color="dark"
-                fill="outline"
-                onClick={() => {
-                  setMsg();
-                }}
-              >
-                次
-              </IonButton>
-            )}
-              </div>*/}
         </div>
       </IonContent>
     </IonPage>

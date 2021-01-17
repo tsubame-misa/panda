@@ -1,4 +1,4 @@
-export const request_send_massage = async (item) => {
+export const request_changed_massage = async (item) => {
   try {
     const response = await fetch(
       `${process.env.REACT_APP_API_ENDPOINT}/change_panda`,
@@ -13,7 +13,7 @@ export const request_send_massage = async (item) => {
   }
 };
 
-export const request_changed_massage = async (item) => {
+export const request_send_massage = async (item) => {
   try {
     const response = await fetch(
       `${process.env.REACT_APP_API_ENDPOINT}/user_message`,
