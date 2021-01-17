@@ -78,7 +78,8 @@ const Talking = () => {
               <div className="mt-16 ">
                 <div className="balloon">
                   <p>何かエラーが起きてるな…</p>
-                  <p>もう一回押してみて</p>
+                  <p>パンダが寝てるのかも</p>
+                  <p>少し待ったらもう一回押してみて</p>
                 </div>
               </div>
             ) : (
