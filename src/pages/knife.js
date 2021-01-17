@@ -6,11 +6,13 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
+  IonButton,
+  IonIcon,
 } from "@ionic/react";
 import React, { useState } from "react";
 import panda from "../img/panda_with_bat_touka.png";
 import { data } from "./services";
-import { chevronBackOutline } from "ionicons/icons";
+import { chevronBackOutline, logoTwitter } from "ionicons/icons";
 
 const Knife = () => {
   const [pandaComment, setPandaComment] = useState("");
@@ -59,6 +61,18 @@ const Knife = () => {
             src={img}
             onClick={() => setMsg()}
           ></img>
+
+          {pandaComment !== "" ? (
+            <IonButton
+              size="small"
+              href={`http://twitter.com/share?url=https://kowai-panda.netlify.app&text=【パンダに刺された】%0a パンダに刺されて致命傷を負いました　%0a %0a パンダ：${pandaComment} %0a %0a 自分：ｳｯ...ﾊﾞﾀﾘ… %0a %0a  制作者：@Tsubame_misa  %0a %0a %0a ▼みんなもパンダと仲良くなろう！ &count=horizontal&lang=ja`}
+            >
+              <IonIcon icon={logoTwitter}></IonIcon>
+              &ensp;パンダに刺された！！でツイートする
+            </IonButton>
+          ) : (
+            []
+          )}
         </div>
       </IonContent>
     </IonPage>
