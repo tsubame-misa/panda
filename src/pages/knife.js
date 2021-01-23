@@ -59,6 +59,7 @@ const Knife = () => {
           <img
             className="my-6 object-contain h-48 w-full"
             src={img}
+            alt="こわいパンダの画像"
             onClick={() => setMsg()}
           ></img>
 

@@ -4,16 +4,12 @@ import {
   IonLabel,
   IonPage,
   IonItem,
-  IonFab,
-  IonFabButton,
-  IonIcon,
 } from "@ionic/react";
 import React from "react";
 import "./style.css";
 import panda from "../img/panda_touka.png";
-import { add } from "ionicons/icons";
 
-const Home = ({ history }) => {
+const Home = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
@@ -26,7 +22,11 @@ const Home = ({ history }) => {
               <IonLabel className="">パンダの館</IonLabel>
             </IonItem>
 
-            <img className="object-contain h-48 w-full " src={panda}></img>
+            <img
+              className="object-contain h-48 w-full "
+              alt="パンダの画像"
+              src={panda}
+            ></img>
 
             <div className="mt-3 text-center">
               <IonButton
@@ -34,7 +34,6 @@ const Home = ({ history }) => {
                 fill="outline"
                 color="dark"
                 routerLink="/talk"
-                //onClick={() => history.push("/talk")}
               >
                 パンダとおしゃべり
               </IonButton>
@@ -45,7 +44,6 @@ const Home = ({ history }) => {
                 fill="outline"
                 color="dark"
                 routerLink="/teach"
-                //</div>onClick={() => history.push("/teach")}
               >
                 パンダ構文講座
               </IonButton>
@@ -55,7 +53,6 @@ const Home = ({ history }) => {
                 fill="outline"
                 color="dark"
                 routerLink="/knife"
-                // onClick={() => history.push("/knife")}
               >
                 パンダのつぶやき
               </IonButton>
@@ -67,7 +64,6 @@ const Home = ({ history }) => {
                 fill="outline"
                 color="dark"
                 routerLink="/explanation"
-                //onClick={() => history.push("/talk")}
               >
                 {window.innerWidth >= 360 ? (
                   <div className="mx-24">

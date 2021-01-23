@@ -6,8 +6,6 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-  IonButton,
-  IonIcon,
   IonCard,
   IonGrid,
   IonCol,
@@ -15,15 +13,12 @@ import {
   IonItem,
   IonCardHeader,
   IonCardContent,
-  IonFooter,
-  IonAvatar,
 } from "@ionic/react";
-import React, { useState } from "react";
+import React from "react";
 import panda from "../img/panda_touka.png";
 import panda_b from "../img/panda_with_bat_touka.png";
 import panda_s from "../img/no_sleep_panda.png";
-import { data } from "./services";
-import { chevronBackOutline, logoTwitter } from "ionicons/icons";
+import { chevronBackOutline } from "ionicons/icons";
 
 const Exp = () => {
   return (
@@ -54,11 +49,11 @@ const Exp = () => {
                     <IonRow>
                       <IonCol size="4">
                         <div className="display-flex">
-                          <img src={panda} />
+                          <img src={panda} alt="パンダの画像" />
                         </div>
                       </IonCol>
                       <IonCol size="8">
-                        このアプリは某パンダをテーマにしたネタアプリです。何してもいいよって許可はもらいました。はい。
+                        このアプリは某パンダをテーマにしたネタアプリです。本人から何してもいいよって許可はもらいました。はい。
                         <br />
                         たまにパンダが寝ていると返事が遅い場合があります。少し待ってから再チャレンジしてみてください。
                       </IonCol>
@@ -80,7 +75,7 @@ const Exp = () => {
                       </IonCol>
                       <IonCol size="4">
                         <div className="display-flex">
-                          <img src={panda_s} />
+                          <img src={panda_s} alt="寝てないパンダの画像" />
                         </div>
                       </IonCol>
                     </IonRow>
@@ -114,7 +109,7 @@ const Exp = () => {
                     <IonRow>
                       <IonCol size="4">
                         <div className="display-flex">
-                          <img src={panda_b} />
+                          <img src={panda_b} alt="こわいパンダの画像" />
                         </div>
                       </IonCol>
                       <IonCol size="8">

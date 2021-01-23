@@ -4,7 +4,6 @@ import {
   IonContent,
   IonHeader,
   IonIcon,
-  IonItem,
   IonLabel,
   IonPage,
   IonTextarea,
@@ -76,7 +75,11 @@ const Talking = () => {
             )}
           </div>
 
-          <img className="object-contain h-48 w-full" src={img}></img>
+          <img
+            className="object-contain h-48 w-full"
+            alt="パンダの画像"
+            src={img}
+          ></img>
 
           <div className="mt-6">
             <div className="text-center border-black border-2 rounded-lg mx-4 my-2 p-2">
