@@ -4,10 +4,14 @@ import {
   IonLabel,
   IonPage,
   IonItem,
+  IonFab,
+  IonFabButton,
+  IonIcon,
 } from "@ionic/react";
 import React from "react";
 import "./style.css";
 import panda from "../img/panda_touka.png";
+import { add } from "ionicons/icons";
 
 const Home = ({ history }) => {
   return (
@@ -24,12 +28,13 @@ const Home = ({ history }) => {
 
             <img className="object-contain h-48 w-full " src={panda}></img>
 
-            <div className="mt-8 text-center">
+            <div className="mt-3 text-center">
               <IonButton
                 className="justify-self-center "
                 fill="outline"
                 color="dark"
-                onClick={() => history.push("/talk")}
+                routerLink="/talk"
+                //onClick={() => history.push("/talk")}
               >
                 パンダとおしゃべり
               </IonButton>
@@ -39,7 +44,8 @@ const Home = ({ history }) => {
                 className="button2"
                 fill="outline"
                 color="dark"
-                onClick={() => history.push("/teach")}
+                routerLink="/teach"
+                //</div>onClick={() => history.push("/teach")}
               >
                 パンダ構文講座
               </IonButton>
@@ -48,9 +54,30 @@ const Home = ({ history }) => {
                 className="button3"
                 fill="outline"
                 color="dark"
-                onClick={() => history.push("/knife")}
+                routerLink="/knife"
+                // onClick={() => history.push("/knife")}
               >
                 パンダのつぶやき
+              </IonButton>
+            </div>
+
+            <div className="text-center">
+              <IonButton
+                className="justify-self-center "
+                fill="outline"
+                color="dark"
+                routerLink="/explanation"
+                //onClick={() => history.push("/talk")}
+              >
+                {window.innerWidth >= 360 ? (
+                  <div className="mx-24">
+                    <IonLabel>パンダの館って？</IonLabel>
+                  </div>
+                ) : (
+                  <div className="mx-2">
+                    <IonLabel>パンダの館って？</IonLabel>
+                  </div>
+                )}
               </IonButton>
             </div>
           </div>

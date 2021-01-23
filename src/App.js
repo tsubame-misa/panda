@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Talking from "./pages/Talking";
 import Knife from "./pages/Knife";
 import Teach from "./pages/Teach";
+import Exp from "./pages/Explanation";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -35,6 +36,7 @@ const App = () => (
         <Route path="/talk" component={Talking}></Route>
         <Route path="/knife" component={Knife}></Route>
         <Route path="/teach" component={Teach}></Route>
+        <Route path="/explanation" component={Exp}></Route>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

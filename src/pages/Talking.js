@@ -48,7 +48,7 @@ const Talking = () => {
             icon={chevronBackOutline}
           />
           <IonTitle>
-            <IonLabel>おしゃべり</IonLabel>
+            <IonLabel className="text-center">おしゃべり</IonLabel>
           </IonTitle>
         </IonToolbar>
       </IonHeader>

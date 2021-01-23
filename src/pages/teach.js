@@ -16,8 +16,6 @@ import "./style.css";
 import panda from "../img/panda_touka.png";
 import { chevronBackOutline, logoTwitter } from "ionicons/icons";
 import { request_changed_massage } from "./services";
-import { isEmptyStatement } from "typescript";
-
 const Talking = () => {
   const [pandaComment, setPandaComment] = useState("");
   const [message, setMessage] = useState();
@@ -48,7 +46,7 @@ const Talking = () => {
             icon={chevronBackOutline}
           />
           <IonTitle>
-            <IonLabel>パンダ構文講座</IonLabel>
+            <IonLabel className="text-center">パンダ構文講座</IonLabel>
           </IonTitle>
         </IonToolbar>
       </IonHeader>
