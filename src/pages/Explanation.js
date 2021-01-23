@@ -43,77 +43,89 @@ const Exp = () => {
       </IonHeader>
       <IonContent fullscreen>
         <IonGrid>
-          <IonCard>
-            <IonCardHeader>
-              <IonItem className="font-black">パンダの館</IonItem>
-            </IonCardHeader>
-            <IonCardContent>
-              <IonGrid>
-                <IonRow>
-                  <IonCol size="4">
-                    <div className="display-flex">
-                      <img src={panda} />
-                    </div>
-                  </IonCol>
-                  <IonCol size="8">
-                    このアプリは某パンダをテーマにしたネタアプリです。何してもいいよって許可はもらいました。はい。
-                    <br />
-                    たまにパンダが寝ていると返事が遅い場合があります。少し待ってから再チャレンジしてみてください。
-                  </IonCol>
-                </IonRow>
-              </IonGrid>
-            </IonCardContent>
-          </IonCard>
-          <IonCard>
-            <IonCardHeader>
-              <IonItem className="font-black">パンダとおしゃべり</IonItem>
-            </IonCardHeader>
-            <IonCardContent>
-              <IonGrid>
-                <IonRow>
-                  <IonCol size="8">
-                    この部屋ではパンダとおしゃべりすることができます。パンダは英語やわけわからない言葉は嫌いなので、そういった言葉は投げないでください。それっぽいワードには反応してちゃんとした返事を返します。色々話しかけてみてください。
-                  </IonCol>
-                  <IonCol size="4">
-                    <div className="display-flex">
-                      <img src={panda_s} />
-                    </div>
-                  </IonCol>
-                </IonRow>
-              </IonGrid>
-            </IonCardContent>
-          </IonCard>
+          <IonRow>
+            <IonCol size-sm="6" size="12">
+              <IonCard>
+                <IonCardHeader>
+                  <IonItem className="font-black trans">パンダの館とは</IonItem>
+                </IonCardHeader>
+                <IonCardContent>
+                  <IonGrid>
+                    <IonRow>
+                      <IonCol size="4">
+                        <div className="display-flex">
+                          <img src={panda} />
+                        </div>
+                      </IonCol>
+                      <IonCol size="8">
+                        このアプリは某パンダをテーマにしたネタアプリです。何してもいいよって許可はもらいました。はい。
+                        <br />
+                        たまにパンダが寝ていると返事が遅い場合があります。少し待ってから再チャレンジしてみてください。
+                      </IonCol>
+                    </IonRow>
+                  </IonGrid>
+                </IonCardContent>
+              </IonCard>
+            </IonCol>
+            <IonCol size-sm="6" size="12">
+              <IonCard>
+                <IonCardHeader>
+                  <IonItem className="font-black">パンダとおしゃべり</IonItem>
+                </IonCardHeader>
+                <IonCardContent>
+                  <IonGrid>
+                    <IonRow>
+                      <IonCol size="8">
+                        この部屋ではパンダとおしゃべりすることができます。パンダは英語やわけわからない言葉は嫌いなので、そういった言葉は投げないでください。それっぽいワードには反応してちゃんとした返事を返します。色々話しかけてみてください。
+                      </IonCol>
+                      <IonCol size="4">
+                        <div className="display-flex">
+                          <img src={panda_s} />
+                        </div>
+                      </IonCol>
+                    </IonRow>
+                  </IonGrid>
+                </IonCardContent>
+              </IonCard>
+            </IonCol>
+          </IonRow>
 
-          <IonCard>
-            <IonCardHeader>
-              <IonItem className="font-black">パンダ構文講座</IonItem>
-            </IonCardHeader>
-            <IonCardContent>
-              みなさんはパンダ構文をご存知でしょうか？よくTwitterで観測される「ｺﾜｸﾅｲﾖｰ」などの半角カタカナ」＋「否定形」がどうやらパンダ構文と言われてるようです(なお観測範囲)。
-              <br />
-              この部屋では、パンダに言葉を投げかけるとパンダ構文にして返してもらう体験ができます。試しに「怖い」と打ってみてください。例によって英語とかわけわからない言葉は嫌いです。投げないでください。
-            </IonCardContent>
-          </IonCard>
+          <IonRow>
+            <IonCol size-sm="6" size="12">
+              <IonCard>
+                <IonCardHeader>
+                  <IonItem className="font-black">パンダ構文講座</IonItem>
+                </IonCardHeader>
+                <IonCardContent>
+                  みなさんはパンダ構文をご存知でしょうか？よくTwitterで観測される「ｺﾜｸﾅｲﾖｰ」などの半角カタカナ」＋「否定形」がどうやらパンダ構文と言われてるようです(なお観測範囲)。
+                  <br />
+                  この部屋では、パンダに言葉を投げかけるとパンダ構文にして返してもらう体験ができます。試しに「怖い」と打ってみてください。例によって英語とかわけわからない言葉は嫌いです。投げないでください。
+                </IonCardContent>
+              </IonCard>
+            </IonCol>
 
-          <IonCard>
-            <IonCardHeader>
-              <IonItem className="font-black">パンダのつぶやき</IonItem>
-            </IonCardHeader>
-            <IonCardContent>
-              <IonGrid>
-                <IonRow>
-                  <IonCol size="4">
-                    <div className="display-flex">
-                      <img src={panda_b} />
-                    </div>
-                  </IonCol>
-                  <IonCol size="8">
-                    この部屋ではパンダのつぶやきを聞くことができます。のほほんとしたつぶやきもあれば、グサッと刺される時もあります。刺される覚悟がある方はどうぞこの部屋へ。そして刺された際はぜひ報告を！
-                  </IonCol>
-                </IonRow>
-              </IonGrid>
-            </IonCardContent>
-          </IonCard>
+            <IonCol size-sm="6" size="12">
+              <IonCard>
+                <IonCardHeader>
+                  <IonItem className="font-black">パンダのつぶやき</IonItem>
+                </IonCardHeader>
+                <IonCardContent>
+                  <IonGrid>
+                    <IonRow>
+                      <IonCol size="4">
+                        <div className="display-flex">
+                          <img src={panda_b} />
+                        </div>
+                      </IonCol>
+                      <IonCol size="8">
+                        この部屋ではパンダのつぶやきを聞くことができます。のほほんとしたつぶやきもあれば、グサッと刺される時もあります。刺される覚悟がある方はどうぞこの部屋へ。そして刺された際はぜひ報告を！
+                      </IonCol>
+                    </IonRow>
+                  </IonGrid>
+                </IonCardContent>
+              </IonCard>
+            </IonCol>
+          </IonRow>
 
           <IonCard>
             <IonCardHeader>
