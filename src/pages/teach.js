@@ -34,8 +34,20 @@ const Talking = () => {
       });
   };
 
+  const s = document.getElementById("scroll-off-teach");
+  if (s !== null) {
+    s.addEventListener(
+      "touchmove",
+      function (event) {
+        event.preventDefault();
+        console.log("here");
+      },
+      { passive: false }
+    );
+  }
+
   return (
-    <IonPage>
+    <IonPage id="scroll-off-teach">
       <IonHeader>
         <IonToolbar color="dark">
           <IonBackButton

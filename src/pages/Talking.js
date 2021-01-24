@@ -36,8 +36,7 @@ const Talking = () => {
       .then(() => setMessage(null));
   };
 
-  const s = document.getElementById("scroll");
-  //console.log(s);
+  const s = document.getElementById("scroll-off-talking");
   if (s !== null) {
     s.addEventListener(
       "touchmove",
@@ -50,7 +49,7 @@ const Talking = () => {
   }
 
   return (
-    <IonPage>
+    <IonPage id="scroll-off-talking">
       <IonHeader>
         <IonToolbar color="dark">
           <IonBackButton
