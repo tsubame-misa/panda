@@ -88,19 +88,20 @@ const Talking = () => {
           </div>
 
           <img
-            className="object-contain h-48 w-full"
+            className="object-contain m-6 h-48 w-full"
             alt="パンダの画像"
             src={img}
           ></img>
 
-          <div className="mt-6">
-            <div className="text-center border-black border-2 rounded-lg mx-4 my-2 p-2">
+          <div>
+            <div className="text-center border-black border-2 rounded-lg  p-2 mx-4 sm:mx-32 md:mx-56 lg:mx-60">
               <IonTextarea
                 value={message}
                 placeholder="何か話しかけてみよう！"
                 onIonChange={(e) => {
                   setMessage(e.detail.value);
                 }}
+                style={{ width: "100%", height: "30%" }}
               ></IonTextarea>
             </div>
             <div className="text-center mt-3">

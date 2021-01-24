@@ -23,6 +23,8 @@
   display: inline-block;
   position: relative;
   padding: 0.5rem 1rem;
+  margin-left: 10%;
+  margin-right: 10%;
 
   border: 2px solid black;
   -moz-border-radius: 6px;
