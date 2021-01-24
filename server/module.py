@@ -63,6 +63,9 @@ def make_response(text):
             pass
         node = node.next
 
+    if "仕事" in meishi_list or "働く" in doushi_list:
+        return "はたらきたくない"
+
     if "怖い" in keiyoushi_list:
         return "ｺﾜｸﾅｲﾖｰ"
 
@@ -82,7 +85,7 @@ def make_response(text):
         return data[i]
 
     aiduti = ["うんうん", "へぇ", "それで？", "なるほど？",
-              "草", "寝る寝るねーるね", "おやおや", "こわい", "ﾐｯ"]
+              "草", "寝る寝るねーるね", "おやおや", "こわい", "ﾐｯ", "おきた", "はい", "ﾇ!", "ﾇｰ"]
     i = random.randint(0, len(aiduti)-1)
     return aiduti[i]
 
@@ -90,6 +93,7 @@ def make_response(text):
 
 
 def convert(text, kanji, k, p):
+    print(text, kanji, k, p)
     if p == "サ行変格":
         return "シナイヨー"
     if p == "カ行変格":
@@ -124,6 +128,7 @@ def make_panda(text):
         k = 0
         try:
             d.append(node.feature.split(",")[7])
+            # print(node.feature)
         except IndexError:
             return "英語とかローマ字ﾔﾒﾃ"
 
@@ -140,7 +145,7 @@ def make_panda(text):
         data.append([k, node.feature.split(",")[7], node.feature.split(
             ",")[9], node.feature.split(",")[6], node.feature.split(",")[4]])
         node = node.next
-
+    print(d)
     last = 0
     for i in range(len(data)-1, -1, -1):
         if data[i][0] != 0:
@@ -151,12 +156,16 @@ def make_panda(text):
 
     # if len(data[0]) <= 1:
     #    return "ﾁｮｯﾄﾅﾆｲｯﾃﾙｶﾜｶﾗﾅｲﾅｰ"
+    print(last)
     for i in range(1, len(data)-1):
         if i != last:
             ans += data[i][2]
         else:
             ans += convert(data[i][3], data[i][1], data[i][0], data[i][-1])
             break
+
+    if last == 0:
+        ans += "ｼﾞｬﾅｲﾖｰ"
 
     res = jaconv.z2h(ans, digit=True, ascii=True)
     return res
