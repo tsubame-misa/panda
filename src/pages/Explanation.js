@@ -21,9 +21,21 @@ import panda_s from "../img/no_sleep_panda.png";
 import { chevronBackOutline } from "ionicons/icons";
 
 const Exp = () => {
+  const s = document.getElementById("scroll-off-header");
+  if (s !== null) {
+    s.addEventListener(
+      "touchmove",
+      function (event) {
+        event.preventDefault();
+        console.log("here");
+      },
+      { passive: false }
+    );
+  }
+
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader id="scroll-off-header">
         <IonToolbar color="dark">
           <IonBackButton
             defaultHref="/"
@@ -53,7 +65,7 @@ const Exp = () => {
                         </div>
                       </IonCol>
                       <IonCol size="8">
-                        このアプリは某パンダをテーマにしたネタアプリです。本人から何してもいいよって許可はもらいました。はい。
+                        このアプリは某パンダをテーマにしたネタアプリです。パンダとの会話を楽しむことができます。
                         <br />
                         たまにパンダが寝ていると返事が遅い場合があります。少し待ってから再チャレンジしてみてください。
                       </IonCol>
@@ -124,22 +136,24 @@ const Exp = () => {
 
           <IonCard>
             <IonCardHeader>
-              <IonItem>制作者：渡邉みさと</IonItem>
+              <IonItem className="font-black">制作者</IonItem>
             </IonCardHeader>
             <IonCardContent>
-              何か改善案等あればぜひDMなりメンションなりお願いします！
-              <a
-                href="https://twitter.com/Tsubame_misa?ref_src=twsrc%5Etfw"
-                className="twitter-follow-button"
-                data-show-count="false"
-              >
-                @Tsubame_misa
-              </a>
-              <script
-                async
-                src="https://platform.twitter.com/widgets.js"
-                charSet="utf-8"
-              ></script>
+              <IonItem lines="none" className="text-gray-700">
+                渡邉みさと&ensp;
+                <a
+                  href="https://twitter.com/Tsubame_misa?ref_src=twsrc%5Etfw"
+                  className="twitter-follow-button text-blue-500"
+                  data-show-count="false"
+                >
+                  Twitterアカウント
+                </a>
+                <script
+                  async
+                  src="https://platform.twitter.com/widgets.js"
+                  charSet="utf-8"
+                ></script>
+              </IonItem>
             </IonCardContent>
           </IonCard>
         </IonGrid>

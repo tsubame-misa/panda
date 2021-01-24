@@ -41,12 +41,27 @@ const Talking = () => {
     s.addEventListener(
       "touchmove",
       function (event) {
+        /*if (btn!==null) {
+          event.stopPropagation();
+          console.log("textarea");
+        } else {
+          event.preventDefault();
+          console.log("here");
+        }**/
         event.preventDefault();
+
         console.log("here");
       },
       { passive: false }
     );
   }
+  var btn = document.getElementById("textarea");
+  if (btn !== null) {
+    window.addEventListener("scroll", () => console.log("textarea"));
+  }
+  window.onscroll = function () {
+    console.log("textarea");
+  };
 
   return (
     <IonPage id="scroll-off-talking">
@@ -110,6 +125,7 @@ const Talking = () => {
           <div className="mt-6">
             <div className="text-center border-black border-2 rounded-lg mx-4 my-2 p-2">
               <IonTextarea
+                id="textarea"
                 value={message}
                 placeholder="メッセージをここに書いて「話しかけるボタン」を押そう！"
                 onIonChange={(e) => {
