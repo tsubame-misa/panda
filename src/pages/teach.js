@@ -82,7 +82,7 @@ const Talking = () => {
               </div>
             ) : (
               <div className="mt-10 mb-6 ">
-                <p className="balloon ">{pandaComment}</p>
+                <p className="balloon">{pandaComment}</p>
               </div>
             )}
           </div>
@@ -118,13 +118,17 @@ const Talking = () => {
             </div>
 
             {premessage !== undefined ? (
-              <IonButton
-                size="small"
-                href={`http://twitter.com/share?url=https://kowai-panda.netlify.app&text=【パンダ構文口座】%0a %0a「${premessage}」をパンダ構文変換すると「${pandaComment}」になりました。%0a %0a 制作者：@Tsubame_misa  %0a %0a %0a ▼みんなもパンダと仲良くなろう！ &count=horizontal&lang=ja`}
-              >
-                <IonIcon icon={logoTwitter}></IonIcon>
-                &ensp;結果をツイートする！
-              </IonButton>
+              pandaComment !== "...?" ? (
+                <IonButton
+                  size="small"
+                  href={`http://twitter.com/share?url=https://kowai-panda.netlify.app&text=【パンダ構文口座】%0a 「${premessage}」をパンダ構文変換すると「${pandaComment}」になりました。 %0a  %0a ▼みんなもパンダと仲良くなろう！ &hashtags=パンダの館&count=horizontal&lang=ja`}
+                >
+                  <IonIcon icon={logoTwitter}></IonIcon>
+                  &ensp;結果をツイートする！
+                </IonButton>
+              ) : (
+                []
+              )
             ) : (
               []
             )}

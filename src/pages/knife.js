@@ -78,7 +78,9 @@ const Knife = () => {
           {pandaComment !== "" ? (
             <IonButton
               size="small"
-              href={`http://twitter.com/share?url=https://kowai-panda.netlify.app&text=【パンダに刺された!!】%0a パンダに刺されて致命傷を負いました　%0a %0a パンダ：${pandaComment} %0a %0a 自分：ｳｯ...ﾊﾞﾀﾘ… %0a %0a  制作者：@Tsubame_misa  %0a %0a %0a ▼みんなもパンダと仲良くなろう！ &count=horizontal&lang=ja`}
+              href={`http://twitter.com/share?url=https://kowai-panda.netlify.app&text=【パンダに刺された!!】%0a パンダに刺されて致命傷を負いました　%0a %0a パンダ：${
+                pandaComment.slice(0, 30) + "..."
+              } %0a  自分：ｳｯ...ﾊﾞﾀﾘ… %0a %0a  ▼みんなもパンダと仲良くなろう！&hashtags=パンダの館&count=horizontal&lang=ja`}
             >
               <IonIcon icon={logoTwitter}></IonIcon>
               &ensp;パンダに刺された！！でツイートする

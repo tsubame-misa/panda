@@ -55,13 +55,13 @@ const Talking = () => {
       { passive: false }
     );
   }
-  var btn = document.getElementById("textarea");
+  /*const btn = document.getElementById("textarea");
   if (btn !== null) {
     window.addEventListener("scroll", () => console.log("textarea"));
   }
   window.onscroll = function () {
     console.log("textarea");
-  };
+  };*/
 
   return (
     <IonPage id="scroll-off-talking">
