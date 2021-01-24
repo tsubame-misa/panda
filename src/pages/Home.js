@@ -10,9 +10,22 @@ import "./style.css";
 import panda from "../img/panda_touka.png";
 
 const Home = () => {
+  const s = document.getElementById("scroll_off");
+  // console.log(s);
+  if (s !== null) {
+    s.addEventListener(
+      "touchmove",
+      function (event) {
+        event.preventDefault();
+        console.log("here");
+      },
+      { passive: false }
+    );
+  }
+
   return (
     <IonPage>
-      <IonContent fullscreen>
+      <IonContent fullscreen id="scroll_off">
         <div className="display-flex">
           <div className="my-2 py-2 bg-white">
             <IonItem

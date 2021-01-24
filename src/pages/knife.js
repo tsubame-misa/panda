@@ -23,8 +23,20 @@ const Knife = () => {
     setPandaComment(data[a]);
   };
 
+  const s = document.getElementById("scroll-off_knife");
+  if (s !== null) {
+    s.addEventListener(
+      "touchmove",
+      function (event) {
+        event.preventDefault();
+        console.log("here");
+      },
+      { passive: false }
+    );
+  }
+
   return (
-    <IonPage>
+    <IonPage id="scroll-off_knife">
       <IonHeader>
         <IonToolbar color="dark">
           <IonBackButton

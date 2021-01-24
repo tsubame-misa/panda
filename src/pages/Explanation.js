@@ -130,7 +130,7 @@ const Exp = () => {
               何か改善案等あればぜひDMなりメンションなりお願いします！
               <a
                 href="https://twitter.com/Tsubame_misa?ref_src=twsrc%5Etfw"
-                class="twitter-follow-button"
+                className="twitter-follow-button"
                 data-show-count="false"
               >
                 @Tsubame_misa
@@ -138,7 +138,7 @@ const Exp = () => {
               <script
                 async
                 src="https://platform.twitter.com/widgets.js"
-                charset="utf-8"
+                charSet="utf-8"
               ></script>
             </IonCardContent>
           </IonCard>

@@ -36,6 +36,19 @@ const Talking = () => {
       .then(() => setMessage(null));
   };
 
+  const s = document.getElementById("scroll");
+  //console.log(s);
+  if (s !== null) {
+    s.addEventListener(
+      "touchmove",
+      function (event) {
+        event.preventDefault();
+        console.log("here");
+      },
+      { passive: false }
+    );
+  }
+
   return (
     <IonPage>
       <IonHeader>
