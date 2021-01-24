@@ -97,7 +97,7 @@ const Talking = () => {
             <div className="text-center border-black border-2 rounded-lg  p-2 mx-4 sm:mx-32 md:mx-56 lg:mx-60">
               <IonTextarea
                 value={message}
-                placeholder="何か話しかけてみよう！"
+                placeholder="変換してほしい文を入れてね！"
                 onIonChange={(e) => {
                   setMessage(e.detail.value);
                 }}
