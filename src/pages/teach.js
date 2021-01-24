@@ -113,7 +113,7 @@ const Talking = () => {
                   sendMessage();
                 }}
               >
-                変換する
+                変換してもらう
               </IonButton>
             </div>
 
